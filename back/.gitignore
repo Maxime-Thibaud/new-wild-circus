@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ignore conf.js
+# ignore files
 conf.js
+secret.js
