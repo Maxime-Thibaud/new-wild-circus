@@ -30,7 +30,11 @@ CREATE TABLE performance
 INSERT INTO performance 
 (name_performance, description_performance, photo_performance, category_id)
 VALUES
-('Spectacle de Bozo le clown', 'Un spectacle de clown', 'https://zupimages.net/up/20/05/ws1s.jpg', 1);
+('Spectacle de Bozo le clown', 'Un spectacle de clown', 'https://zupimages.net/up/20/05/ws1s.jpg', 1),
+("L'antre des fauves", 'Un spectacle de fauve', 'https://zupimages.net/up/20/05/ws1s.jpg', 2),
+('Quilles ou tronçonneuses ?', 'Un spectacle de jonglage entre Max Pinder et Mr Bricolage', 'https://zupimages.net/up/20/05/ws1s.jpg', 3),
+("Le saut de l'ange", 'Un spectacle de trapézistes', 'https://zupimages.net/up/20/05/ws1s.jpg', 4),
+('Where is the money Lebowsky ?', 'Un spectacle de magie inspiré du CAC40', 'https://zupimages.net/up/20/05/ws1s.jpg', 5);
 
 CREATE TABLE artist
 (
@@ -46,4 +50,9 @@ CREATE TABLE artist
 INSERT INTO artist
 (firstname, lastname, description_artist, photo_artist, performance_id)
 VALUES
-('John', 'Gacy', 'Un clown exceptionnel', 'https://zupimages.net/up/20/05/xq8o.jpg', 1);
+('John', 'Gacy', 'Un clown exceptionnel', 'https://zupimages.net/up/20/05/xq8o.jpg', 1),
+('Tony', 'Python', 'Un dresseur de fauve', 'https://zupimages.net/up/20/05/xq8o.jpg', 2),
+('Igor', 'Gone', "Ancien chef de rayon à Mr Bricolage, Igor est capable de jongler avec n'importe quoi", 'https://zupimages.net/up/20/05/xq8o.jpg', 3),
+('Terrence', 'Stoot', 'Trapeziste mélomane', 'https://zupimages.net/up/20/05/xq8o.jpg', 4),
+('Philippe', 'Argyle', 'Trapéziste mélomane', 'https://zupimages.net/up/20/05/xq8o.jpg', 4),
+('Jeffrey', 'Lebowski', 'Prestigitateur de renom et ancien trader', 'https://zupimages.net/up/20/05/xq8o.jpg', 5);
