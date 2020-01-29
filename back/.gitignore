@@ -24,4 +24,3 @@ yarn-error.log*
 
 # ignore files
 conf.js
-secret.js

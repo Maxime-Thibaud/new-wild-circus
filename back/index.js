@@ -12,6 +12,9 @@ app.use(bodyParser.json());
 const categories = require('./routes/categories');
 app.use('/api/categories', categories);
 
+const performances = require('./routes/performances');
+app.use('/api/performances', performances);
+
 app.listen(port, (err) => {
   if (err) {
     throw new Error('Something bad happened...');
