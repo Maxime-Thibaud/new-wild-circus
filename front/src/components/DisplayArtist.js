@@ -3,45 +3,8 @@ import axios from 'axios';
 // import './Display.css';
 // import './Nicebutton.css'
 
-class DisplayArtist extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      places : [],
-      currentPlace: 0,
-    }
-    // this.nextPlace = this.nextPlace.bind(this)
-  }
+function DisplayArtist() {
 
-  // nextPlace() {
-  //   this.setState(prevState => {
-  //     return {
-  //       currentPlace:
-  //         (prevState.currentPlace + 1) % prevState.places.length
-  //     }
-  //   })
-  // }
-
-  componentDidMount() {
-    axios
-      .get('http://localhost:8000/api/artists')
-      .then(response => response.data)
-      .then(data => {
-        this.setState({
-          artists: data
-        })
-      })
-  }
-
-  componentDidUpdate() {
-    axios
-      .get('http://localhost:8000/api/places')
-      .then(axios.spread((places)=>{
-        this.setState({
-          places: places.data,
-        })
-      }))
-    }
   // let url = 'http://via.placeholder.com/100x80'
   // if (props.artist.photo_artist) {
   //   url = props.artist.photo_artist;
@@ -54,21 +17,19 @@ class DisplayArtist extends React.Component {
   //   alt: 'profil du vacancier'
   // }
 
-  render() {
-    return (
-      <div id="pagePlace">
-        {/* <div id="ProfilPlace">
-        <img className="photoProfil" src={imgValues.src} alt={imgValues.alt} ></img>
-        </div>
-        <h2 className="titreProfil">{props.artist.firstname} {props.artist.lastname}</h2>
-        <div className="desc">
-          <p>{props.artist.description_artist}</p>
-        </div>
-        <button className='buttonNextVacationer'  type="button" onClick={props.nextPlace}>Suivant</button> */}
-        <p>hello</p>
+  return (
+    <div id="pagePlace">
+      {/* <div id="ProfilPlace">
+      <img className="photoProfil" src={imgValues.src} alt={imgValues.alt} ></img>
       </div>
-    )
-  }
+      <h2 className="titreProfil">{props.artist.firstname} {props.artist.lastname}</h2>
+      <div className="desc">
+        <p>{props.artist.description_artist}</p>
+      </div>
+      <button className='buttonNextVacationer'  type="button" onClick={props.nextPlace}>Suivant</button> */}
+      <p>hello</p>
+    </div>
+  )
 }
 
 export default DisplayArtist;
