@@ -6,14 +6,14 @@ function DisplayArtist(props) {
   return (
     <div>
       <div>
-      <img src={props.artist.photo_artist} alt="artist" ></img>
+      {/* <img src={props.artist.photo_artist} alt="artist" ></img> */}
       </div>
       <h2>{props.artist.firstname} {props.artist.lastname}</h2>
       <div>
         <p>{props.artist.description_artist}</p>
       </div>
+      <button type="button" onClick={props.previousArtist}>Précédent</button>
       <button type="button" onClick={props.nextArtist}>Suivant</button>
-      <p>hello</p>
     </div>
   )
 }
