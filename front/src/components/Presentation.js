@@ -17,7 +17,7 @@ function Presentation() {
           dans toutes nos actions et relations avec nos artistes a toujours été un engagement fort de Wild Circus. 
           Nous avons établi des règles de conduite qui régissent
           le comportement de tout le personnel en matière de protection animale. Ainsi, aucun animal n'a jamais été 
-          dépecé volontairement au sein du Wild Circus.
+          tué volontairement au sein du Wild Circus.
         </p>
       </div>
     </div>
