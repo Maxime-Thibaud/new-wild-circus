@@ -11,6 +11,7 @@ class App extends React.Component {
       currentArtist: 0,
     }
     this.nextArtist = this.nextArtist.bind(this)
+    this.previousArtist = this.previousArtist.bind(this)
   }
 
   nextArtist() {
@@ -18,6 +19,15 @@ class App extends React.Component {
       return {
         currentArtist:
           (prevState.currentArtist + 1) % prevState.artists.length
+      }
+    })
+  }
+
+  previousArtist() {
+    this.setState(prevState => {
+      return {
+        currentArtist:
+          (prevState.currentArtist - 1) % prevState.artists.length
       }
     })
   }
@@ -41,6 +51,7 @@ class App extends React.Component {
         <DisplayArtist 
           artist={this.state.artists[this.state.currentArtist]}
           nextArtist={this.nextArtist}
+          previousArtist={this.previousArtist}
         />
       )}
       </div>
