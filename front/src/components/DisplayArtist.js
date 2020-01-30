@@ -5,10 +5,11 @@ import React from 'react';
 function DisplayArtist(props) {
   return (
     <div>
+      <h2>Les artistes</h2>
       <div>
       {/* <img src={props.artist.photo_artist} alt="artist" ></img> */}
       </div>
-      <h2>{props.artist.firstname} {props.artist.lastname}</h2>
+      <h3>{props.artist.firstname} {props.artist.lastname}</h3>
       <div>
         <p>{props.artist.description_artist}</p>
       </div>
