@@ -4,7 +4,7 @@ import './Presentation.css'
 function Presentation() {
   return (
     <div>
-      <h2>Présentation</h2>
+      <h2 className="presentation-title">Présentation</h2>
       <div className="presentation-text">
         <p>
           Créé en Ouzbékistan en 1969, le Wild Circus n'a que deux objectifs: divertir le public et faire de l'argent.
