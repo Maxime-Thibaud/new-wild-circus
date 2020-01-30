@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 // import './Display.css';
 // import './Nicebutton.css'
 
@@ -21,6 +22,26 @@ class DisplayArtist extends React.Component {
   //   })
   // }
 
+  componentDidMount() {
+    axios
+      .get('http://localhost:8000/api/artists')
+      .then(response => response.data)
+      .then(data => {
+        this.setState({
+          artists: data
+        })
+      })
+  }
+
+  componentDidUpdate() {
+    axios
+      .get('http://localhost:8000/api/places')
+      .then(axios.spread((places)=>{
+        this.setState({
+          places: places.data,
+        })
+      }))
+    }
   // let url = 'http://via.placeholder.com/100x80'
   // if (props.artist.photo_artist) {
   //   url = props.artist.photo_artist;
