@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Presentation from './components/Presentation';
 import DisplayArtist from './components/DisplayArtist';
 
@@ -6,53 +7,42 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      places : [],
-      currentPlace: 0,
+      artists : null,
+      currentArtist: 0,
     }
-    // this.nextPlace = this.nextPlace.bind(this)
+    this.nextArtist = this.nextArtist.bind(this)
   }
 
-  // nextPlace() {
-  //   this.setState(prevState => {
-  //     return {
-  //       currentPlace:
-  //         (prevState.currentPlace + 1) % prevState.places.length
-  //     }
-  //   })
-  // }
+  nextArtist() {
+    this.setState(prevState => {
+      return {
+        currentArtist:
+          (prevState.currentArtist + 1) % prevState.artists.length
+      }
+    })
+  }
 
-  // componentDidMount() {
-  //   axios
-  //     .get('http://localhost:8000/api/artists')
-  //     .then(response => response.data)
-  //     .then(data => {
-  //       this.setState({
-  //         artists: data
-  //       })
-  //     })
-  // }
-
-  // componentDidUpdate() {
-  //   axios
-  //     .get('http://localhost:8000/api/places')
-  //     .then(axios.spread((places)=>{
-  //       this.setState({
-  //         places: places.data,
-  //       })
-  //     }))
-  //   }
+  componentDidMount() {
+    axios
+      .get('http://localhost:8000/api/artists/')
+      .then(response => response.data)
+      .then(data => {
+        this.setState({
+          artists: data
+        })
+      })
+  }
 
   render() {
     return(
       <div>
       <Presentation />
-      {/* {this.state.places && (
+      {this.state.artists && (
         <DisplayArtist 
-          place={this.state.places[this.state.currentPlace]}
-          nextPlace={this.nextPlace}
+          artist={this.state.artists[this.state.currentArtist]}
+          nextArtist={this.nextArtist}
         />
-      )} */}
-      <DisplayArtist />
+      )}
       </div>
     )
   }
