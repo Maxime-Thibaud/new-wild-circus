@@ -1,9 +1,10 @@
 import React from 'react';
+import Presentation from './components/Presentation';
 
 function App() {
   return (
     <div>
-      <p>hello</p>
+      <Presentation />
     </div>
   );
 }
