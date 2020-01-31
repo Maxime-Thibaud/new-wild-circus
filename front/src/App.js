@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import Presentation from './components/Presentation';
 import DisplayArtist from './components/DisplayArtist';
+import Menu from './components/Menu';
+import './App.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -46,14 +48,16 @@ class App extends React.Component {
   render() {
     return(
       <div>
-      <Presentation />
-      {this.state.artists && (
-        <DisplayArtist 
-          artist={this.state.artists[this.state.currentArtist]}
-          nextArtist={this.nextArtist}
-          previousArtist={this.previousArtist}
-        />
-      )}
+        <h1>The Wild Circus</h1>
+        <Menu />
+        <Presentation />
+        {this.state.artists && (
+          <DisplayArtist 
+            artist={this.state.artists[this.state.currentArtist]}
+            nextArtist={this.nextArtist}
+            previousArtist={this.previousArtist}
+          />
+        )}
       </div>
     )
   }
